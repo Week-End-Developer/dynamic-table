@@ -1,0 +1,15 @@
+:host {
+    height: 100%;
+    width: 100%;
+    display: block;
+}
+
+mat-drawer {
+    width: 3.5rem;
+}
+
+mat-drawer-content {
+    width: calc(100% - 3.5rem);
+    display: block;
+    overflow: auto;
+}

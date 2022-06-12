@@ -1,0 +1,37 @@
+:host {
+    width: 100%;
+    height: 100%;
+    display: block;
+    height: calc(100% - 58px);
+    width: 100%;
+    display: block;
+    color: #565656 !important;
+    font-size: 12px !important;
+}
+
+:host::ng-deep.mat-elevation-z8 {
+    height: 100% !important;
+}
+
+.table-container {
+    // max-height: calc(100% - 120px);
+    height: 100%;
+    overflow: auto;
+}
+
+th {
+    text-transform: capitalize;
+}
+
+.mat-cell {
+    font-size: 12px !important;
+}
+
+.add-button {
+    position: absolute;
+    bottom: 12px;
+    left: 14px;
+    font-size: 12px;
+    line-height: 31px;
+    background-color: #5e7ed9;
+}

@@ -1,0 +1,41 @@
+<div class="row m-0 section">
+    <div class="d-flex" style="padding-left: 9.7px;">
+        <div class="flex-grow-1">
+            <span style="font-weight: bolder;">SIM Cards</span>
+            <i class="fa-solid fa-magnifying-glass mx-3" style="color: #626466;"></i>
+            <span>
+                <input #filter (keyup)="filterChange(filter.value)" matInput
+                    [placeholder]="'Search for' + ' ' + columnNameList" value="">
+            </span>
+        </div>
+        <div>
+            <i class=" fa-solid fa-question"></i>
+        </div>
+    </div>
+</div>
+
+<div class="row m-0 section" style="border: unset !important;">
+    <div class="d-flex">
+        <div class="flex-grow-1 d-flex" style="align-items: center;">
+
+            <div style="margin-right: 23px;">
+                <i class="fa-solid fa-filter mr-2"></i>
+            </div>
+            <mat-chip-list aria-label="Fish selection">
+                <mat-chip>Group: EU <i (click)="onChipEditClick($event)" class="fa-solid fa-pencil chip-edit-icon"></i>
+                </mat-chip>
+                <mat-chip>Group: EU <i (click)="onChipEditClick($event)" class="fa-solid fa-pencil chip-edit-icon"></i>
+                </mat-chip>
+                <mat-chip>Group: EU <i (click)="onChipEditClick($event)" class="fa-solid fa-pencil chip-edit-icon"></i>
+                </mat-chip>
+                <mat-chip>Group: EU <i (click)="onChipEditClick($event)" class="fa-solid fa-pencil chip-edit-icon"></i>
+                </mat-chip>
+            </mat-chip-list>
+
+            <div class="add-chip-button" style="margin-left: 23px;">
+                <i class="fa-solid fa-plus"></i>
+                <span style="margin-left: 4px;">New</span>
+            </div>
+        </div>
+    </div>
+</div>

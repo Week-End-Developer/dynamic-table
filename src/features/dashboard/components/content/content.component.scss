@@ -1,0 +1,40 @@
+:host {
+    height: calc(100% - 96px);
+    width: 100%;
+    display: block;
+    color: #565656 !important;
+    font-size: 12px !important;
+}
+
+:host::ng-deep.mat-elevation-z8 {
+    height: 100% !important;
+}
+
+// :host::ng-deep.mat-paginator {
+//     padding: 1.5rem 1rem;
+// }
+
+thead {
+    height: 53.99px;
+}
+
+.table-container {
+    max-height: calc(100vh - 120px);
+    overflow: auto;
+}
+
+.add-new-sim-button {
+    position: absolute;
+    bottom: 8px;
+    left: 11px;
+    background-color: #5e7ed9;
+    color: white !important;
+    z-index: 11;
+}
+
+.mat-paginator-sticky {
+    bottom: 0px;
+    position: absolute;
+    z-index: 10;
+    width: 100%;
+}

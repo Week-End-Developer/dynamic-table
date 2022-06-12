@@ -1,0 +1,7 @@
+<mat-toolbar>
+    <app-top-bar [displayedColumns]="displayedColumns"></app-top-bar>
+</mat-toolbar>
+
+<app-table [data]="data" [displayedColumns]="displayedColumns" [dateFormat]="'dd-MM-yyyy'"
+    [pageSizeOptions]="[5, 10, 20,50]" [pageSize]="20" [isStickyHeader]="true">
+</app-table>

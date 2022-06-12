@@ -1,0 +1,30 @@
+<!-- <span style="color:black">{{text$ |async}}</span> -->
+<div class="mat-elevation-z8">
+    <div class="table-container">
+        <table id="matTable" mat-table #matTable [dataSource]="dataSource!" matSort
+            (matSortChange)="onSortData($event)">
+            <ng-container [matColumnDef]="column" *ngFor="let column of displayedColumns; let i = index">
+                <th [style.width]="'calc(100% /' + displayedColumns?.length" mat-header-cell *matHeaderCellDef
+                    mat-sort-header>
+                    {{column}}
+                </th>
+                <td [style.width]="'calc(100% /' + displayedColumns?.length" mat-cell *matCellDef="let element">
+                    <span
+                        [innerText]="checkData(element[column]) ? (element[column] | date: dateFormat) : element[column]">
+                    </span>
+                </td>
+            </ng-container>
+
+            <tr mat-header-row *matHeaderRowDef="displayedColumns; sticky: isStickyHeader"></tr>
+            <tr mat-row *matRowDef="let row; columns: displayedColumns"></tr>
+
+        </table>
+    </div>
+</div>
+
+
+<button class="add-button" mat-flat-button color="primary">Add New SIM</button>
+
+<mat-paginator [pageSizeOptions]="pageSizeOptions!" [pageSize]="pageSize" showFirstLastButtons
+    aria-label="Select page of periodic elements" class="mat-paginator-sticky">
+</mat-paginator>
